@@ -29,37 +29,27 @@ if [ -d "organizations/peerOrganizations" ]; then
 fi
 
 
-# Create crypto material using cryptogen
+# Generate certificates using Fabric CA
+# Excute CA containers
+infoln "------------- Generating certificates using Fabric CA"
+COMPOSE_FILE_CA=docker/docker-compose-ca.yaml
+IMAGE_TAG=latest docker-compose -f $COMPOSE_FILE_CA up -d 2>&1
+sleep 2
 
-infoln "Generating certificates using cryptogen tool"
+# Create crypto material using Fabric CA
+. scripts/registerEnroll.sh
 
-subinfoln "Creating Org1 Identities"
+subinfoln "Create Org1 crypto material"
+createOrg1
 
-set -x
-cryptogen generate --config=./config/crypto-config-org1.yaml --output="organizations"
-res=$?
-{ set +x; } 2>/dev/null
+subinfoln "Create Org2 crypto material"
+createOrg2
 
-subinfoln "Creating Org2 Identities"
+subinfoln "Create Org3 crypto material"
+createOrg3
 
-set -x
-cryptogen generate --config=./config/crypto-config-org2.yaml --output="organizations"
-res=$?
-{ set +x; } 2>/dev/null
-
-subinfoln "Creating UserOrg Identities"
-
-set -x
-cryptogen generate --config=./config/crypto-config-userorg.yaml --output="organizations"
-res=$?
-{ set +x; } 2>/dev/null
-
-subinfoln "Creating Orderer Org Identities"
-
-set -x
-cryptogen generate --config=./config/crypto-config-orderer.yaml --output="organizations"
-res=$?
-{ set +x; } 2>/dev/null
+subinfoln "Create Orderer crypto material"
+createOrderer
 
 # Generate orderer system channel genesis block.
 infoln "------------- Generating Orderer Genesis block"
@@ -73,7 +63,6 @@ infoln "------------- Bring up the peer and orderer nodes using docker compose"
 COMPOSE_FILES=docker/docker-compose-net.yaml
 # IMAGE_TAG=latest docker-compose -f $COMPOSE_FILES up -d 2>&1
 COMPOSE_FILES_COUCH=docker/docker-compose-couch.yaml
-COMPOSE_FILES_CA=docker/docker-compose-ca.yaml
-IMAGE_TAG=latest docker-compose -f $COMPOSE_FILES -f $COMPOSE_FILES_COUCH -f $COMPOSE_FILES_CA up -d 2>&1
+IMAGE_TAG=latest docker-compose -f $COMPOSE_FILES -f $COMPOSE_FILES_COUCH up -d 2>&1
 
 docker ps -a

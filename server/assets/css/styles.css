@@ -1,0 +1,505 @@
+/*!**********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/client/scss/styles.scss ***!
+  \**********************************************************************************************************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  background-color: #EBF5FB;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.header_left {
+  font-size: 50px;
+  margin-left: 50px;
+  color: black;
+}
+
+nav {
+  margin-right: 60px;
+  font-size: 20px;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  margin-left: 40px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  background-color: #192950;
+  font-weight: 600;
+  font-size: 16px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer_left {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+footer .footer_left span {
+  margin-left: 10px;
+}
+footer .footer_right {
+  margin-right: 15px;
+}
+footer .footer_right span {
+  margin-left: 15px;
+}
+
+.login {
+  background-color: #F5F5F5;
+  margin-top: 5px;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.login h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.login form {
+  margin-top: 80px;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  font-weight: 500;
+}
+.login form span {
+  margin-bottom: 10px;
+}
+.login form input {
+  font-size: 25px;
+  height: 40px;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.login form input:last-child {
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  justify-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: rgb(30, 216, 166);
+  background: linear-gradient(90deg, rgb(30, 216, 166) 35%, rgb(30, 139, 212) 100%);
+}
+.login form input:last-child:hover {
+  cursor: pointer;
+}
+
+.join {
+  background-color: #F5F5F5;
+  margin-top: 5px;
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.join h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.join p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.join form {
+  margin-top: 120px;
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
+  font-weight: 500;
+  justify-content: center;
+  align-items: flex-end;
+}
+.join form div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.join form div input {
+  justify-self: flex-end;
+}
+.join form .spDiv {
+  margin-bottom: 2px;
+}
+.join form p {
+  margin-bottom: 10px;
+}
+.join form span {
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.join form input {
+  font-size: 24px;
+  height: 40px;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.join form .joinBtn {
+  width: 100%;
+  font-weight: 600;
+  color: white;
+  justify-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: rgb(30, 216, 166);
+  background: linear-gradient(90deg, rgb(30, 216, 166) 35%, rgb(30, 139, 212) 100%);
+}
+.join form .joinBtn:hover {
+  cursor: pointer;
+}
+
+.homeScreen {
+  display: flex;
+}
+.homeScreen .pic {
+  margin-top: 200px;
+}
+.homeScreen .pic img {
+  width: 730px;
+  height: 700px;
+}
+.homeScreen .intro {
+  margin-top: 250px;
+  margin-right: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.homeScreen .intro h2 {
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 40px;
+}
+.homeScreen .intro p {
+  font-size: 25px;
+  line-height: 1.4em;
+}
+.homeScreen .intro button {
+  text-align: center;
+  width: 150px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  background-color: #20DCB2;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.invoke {
+  background-color: #F5F5F5;
+  margin-top: 5px;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.invoke h3 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.invoke form {
+  margin-top: 80px;
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+  font-weight: 500;
+}
+.invoke form .files {
+  all: unset;
+  display: none;
+}
+.invoke form .fileBtn {
+  font-size: 18px;
+  font-weight: 600;
+  height: 40px;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  line-height: 40px;
+  cursor: pointer;
+  background-color: white;
+}
+.invoke form .fileBtn:hover {
+  background-color: aquamarine;
+}
+.invoke form span {
+  margin-bottom: 10px;
+}
+.invoke form input {
+  font-size: 25px;
+  height: 40px;
+  border-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+.invoke form input:last-child {
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  justify-self: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: rgb(30, 216, 166);
+  background: linear-gradient(90deg, rgb(30, 216, 166) 35%, rgb(30, 139, 212) 100%);
+}
+.invoke form input:last-child:hover {
+  cursor: pointer;
+}
+
+.queryContainer {
+  display: flex;
+  flex-direction: column;
+}
+.queryContainer .query_header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.queryContainer .query_header .query_header_left {
+  margin-right: 400px;
+}
+.queryContainer .query_header .query_header_left h2 {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(30, 227, 161);
+  margin-bottom: 50px;
+}
+.queryContainer .query_header .query_header_left p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+.queryContainer .query_header .query_header_right {
+  font-size: 25px;
+}
+.queryContainer .query_header .query_header_right input {
+  background-color: #F5F5F5;
+  color: #F5F5F5;
+  border: none;
+  border-bottom: 5px solid rgb(30, 227, 161);
+  width: 250px;
+  margin-right: 10px;
+}
+.queryContainer .query_header .query_header_right .fas.fa-search {
+  color: rgb(30, 227, 161);
+}
+.queryContainer .orgCert {
+  margin-bottom: 200px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.queryContainer .orgCert table {
+  width: 100%;
+  border-bottom: 1px solid #444444;
+  border-collapse: collapse;
+  text-align: center;
+}
+.queryContainer .orgCert th, .queryContainer .orgCert td {
+  border-bottom: 1px solid #444444;
+  padding: 20px;
+}
+.queryContainer .orgCert table thead {
+  font-size: 24px;
+  font-weight: 500;
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+}
+.queryContainer .orgCert table tbody {
+  margin-top: 20px;
+}
+.queryContainer .orgCert table tbody td:last-child span {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #1EE3A1;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+body {
+  background-color: #F5F5F5;
+  height: 100vh;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,96 @@
+.queryContainer {
+    display: flex;
+    flex-direction: column;
+
+    .query_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+       
+
+        .query_header_left {
+            margin-right: 400px;
+            
+            
+            h2 {
+                font-size: 50px;
+                font-weight: 600;
+                color: rgb(30, 227, 161);
+                margin-bottom: 50px;
+            }
+            p {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.3em;
+            }
+        }
+        .query_header_right {
+            font-size: 25px;
+            input {
+                background-color: #F5F5F5;
+                color: #F5F5F5;
+                border: none;
+                border-bottom: 5px solid rgb(30, 227, 161);
+                width: 250px;
+                margin-right: 10px;
+            }
+            .fas.fa-search {
+                color: rgb(30, 227, 161);
+            }
+        }
+    }
+
+    .orgCert {
+        margin-bottom: 200px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        table {
+            width: 100%;
+            border-bottom: 1px solid #444444;
+            border-collapse: collapse;
+            text-align: center;
+          }
+          th, td {
+            border-bottom: 1px solid #444444;
+            padding: 20px;
+          }
+
+        table {
+
+            
+            thead {
+                font-size: 24px;
+                font-weight: 500;
+                border-bottom: 3px solid black;
+                margin-bottom: 20px;
+
+            }
+            tbody {
+                margin-top: 20px;
+
+                td {
+                    &:last-child {
+                        span {
+                            color: white;
+                            font-size: 14px;
+                            font-weight: 500;
+                            background-color: #1EE3A1;
+                            padding: 15px;
+                            border-radius: 25px;
+                        }
+
+                     
+
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,53 @@
+.homeScreen {
+    display: flex;
+
+    .pic {
+        margin-top: 200px;
+        
+        img {
+            width: 730px;
+            height: 700px;
+            
+        }
+    }
+    
+
+
+    .intro {
+        margin-top: 250px;
+        margin-right: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            font-weight: 700;
+            font-size: 60px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 25px ;
+            line-height: 1.4em;
+        }
+
+        button {
+            
+            text-align: center;
+            width: 150px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            background-color: #20DCB2;
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+
+            
+            
+        }
+    }
+
+
+}

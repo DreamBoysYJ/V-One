@@ -1,0 +1,14 @@
+extends base
+
+block content
+    if errorMessage 
+        span=errorMessage
+    div.login
+        h3 로그인
+        form(method="POST")
+            span 아이디
+            input(,name="id", type="text", required)
+            span 비밀번호
+            input(name="password", type="password", required)
+            input(type="submit", value="로그인").loginBtn
+        div.etc 회원가입 | 아이디 찾기 | 비밀번호 재설정

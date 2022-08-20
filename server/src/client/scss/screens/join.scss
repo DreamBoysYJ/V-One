@@ -1,0 +1,98 @@
+.join {
+    background-color: #F5F5F5;
+    margin-top: 5px;
+    font-size: 20px;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+
+    form {
+        margin-top: 120px;
+    
+        display: flex;
+        font-size: 18px;
+        flex-direction: column;
+        
+        font-weight: 500;
+
+        justify-content: center;
+        align-items: flex-end;
+
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 10px;
+
+            input {
+                justify-self: flex-end;
+            }
+
+        }
+
+        .spDiv {
+            margin-bottom: 2px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+
+
+        span {
+            margin-right: 50px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        input {
+            font-size: 24px;
+            height: 40px;
+            border-color: rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+            border-radius: 20px;
+            
+            text-align: center;
+
+           
+        }
+    
+        .joinBtn{
+            width: 100%;
+            font-weight: 600;
+            color:white;
+            justify-self: center;
+            
+
+           
+            margin-top: 25px;
+            margin-bottom: 25px;
+            background: rgb(30,216,166);
+            background: linear-gradient(90deg, rgba(30,216,166,1) 35%, rgba(30,139,212,1) 100%);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+    
+    }
+    
+
+
+
+}

@@ -1,0 +1,23 @@
+include mixins/message
+
+doctype html
+html(lang="en")
+    head
+
+       
+        title #{pageTitle} | V-ONE
+        link(rel="shortcut icon", type="image/x-icon", href="https://img.favpng.com/16/7/9/letter-v-computer-icons-alphabet-alphanumeric-png-favpng-UyBuLrsTkQmxcx3vFFnx0F5az.jpg")
+        script(src="https://kit.fontawesome.com/664fa8d6c7.js" crossorigin="anonymous")
+
+        link(rel="stylesheet", href="/static/css/styles.css")
+
+        
+    body 
+
+        include partials/header
+    main
+        block content
+    include partials/footer
+    script(src="/static/js/main.js") 
+    
+    block scripts

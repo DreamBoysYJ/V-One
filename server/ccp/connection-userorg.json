@@ -1,0 +1,49 @@
+{
+    "name": "test-network-userorg",
+    "version": "1.0.0",
+    "client": {
+        "organization": "UserOrg",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "userorg": {
+            "mspid": "UserOrgMSP",
+            "peers": [
+                "peer0.userorg.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca.userorg.example.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.userorg.example.com": {
+            "url": "grpcs://localhost:11051",
+            "tlsCACerts": {
+                "pem": ""
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.userorg.example.com",
+                "hostnameOverride": "peer0.userorg.example.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.userorg.example.com": {
+            "url": "https://localhost:9054",
+            "caName": "ca-userorg",
+            "tlsCACerts": {
+                "pem": [""]
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}

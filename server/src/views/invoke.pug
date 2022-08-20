@@ -1,0 +1,20 @@
+extends base
+
+block content 
+    if errorMessage 
+        span=errorMessage
+
+    div.invoke
+      h3 증명서 추가하기
+      form(method="POST", enctype="multipart/form-data")
+          input(placeholder="증명서 이름", required, type="text", name="certificateName")
+          label.fileBtn(for="pdf") 증명서 파일 가져오기
+          input.files(type="file", accept=".pdf", required, id="pdf", name="pdf")
+          label.fileBtn(for="thumb") 증명서 이미지 가져오기
+          input.files(type="file", accept="image/*", required, id="thumb", name="thumb")
+          input(type="text" placeholder="증명서 이미지 해시값",  name="certHash") 
+          input(type="text" placeholder="증명서 소유주 아이디", name="userID") 
+          input(placeholder="만료일", required, 
+           type="text", name="expiredDate")
+
+          input(type="submit", value="증명서 등록")
