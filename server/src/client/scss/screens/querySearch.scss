@@ -1,0 +1,99 @@
+
+.querySearchContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    .searchBar {
+    
+        font-size: 60px;
+        margin-bottom: 150px;
+        color: rgb(30, 227, 161);
+        height: 100px ;
+        display: flex;
+        justify-content: center;
+        
+    
+        span {
+            font-size: 90px;
+        }
+    
+        
+    
+        form {
+    
+            .searchBar {
+                
+                width: 750px;
+                margin-right: 20px;
+                height: 60px;
+                border: 10px solid white;
+                border-radius: 40px;
+                font-size: 35px;
+    
+                color: black;
+                background-color:  rgb(30, 227, 161);
+            }
+    
+            .submitBtn {
+                display: none;
+                color: rgb(30, 227, 161);
+                font-size: 70px;
+            }
+    
+    
+        }
+    }
+
+    .resultBar {
+        margin-bottom: 200px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        table {
+            width: 100%;
+            border-bottom: 1px solid #444444;
+            border-collapse: collapse;
+            text-align: center;
+          }
+          th, td {
+            border-bottom: 1px solid #444444;
+            padding: 20px;
+          }
+
+        table {
+
+            
+            thead {
+                font-size: 28px;
+                font-weight: 600;
+                border-bottom: 3px solid black;
+                margin-bottom: 20px;
+
+            }
+            tbody {
+                margin-top: 20px;
+
+                td {
+                    &:last-child {
+                        span {
+                            color: white;
+                            font-size: 18px;
+                            font-weight: 500;
+                            background-color: #1EE3A1;
+                            padding: 15px;
+                            border-radius: 25px;
+                        }
+
+                     
+
+                    }
+                }
+            }
+        }
+
+    }
+}

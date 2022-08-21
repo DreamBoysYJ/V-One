@@ -9,8 +9,9 @@ block content
                 p 여러분의 증명서를 확인 및 다운로드할 수 있습니다.
                 p 내가 등록한 증명서와 기관이 등록한 증명서는 구분되어 표시됩니다.
             div.query_header_right
-                input(type="text")
-                i.fas.fa-search
+                form(action="post") 
+                    input(type="text", name="certHash")
+                    i.fas.fa-search
 
 
 
@@ -22,6 +23,7 @@ block content
                 thead 
                     tr 
                         th 선택
+                        th 만료일
                         th 소유주 아이디
                         th 발급 증명서
                         th 발급 기관
@@ -29,6 +31,7 @@ block content
                 tbody 
                     tr 
                         td 
+                        td 2024-08-31
                         td youngju307
                         td 재학증명서
                         td 아주대학교
@@ -36,25 +39,15 @@ block content
                             span 세부 정보
                     tr 
                         td 
+                        td 2024-08-31
                         td youngju307
                         td 졸업증명서
                         td 아주대학교
-                        td 
-                            span 세부 정보
-                    tr 
-                        td 
-                        td youngju307
-                        td 블록체인 자격증 1급
-                        td 한국표준협회
-                        td 
+                        td
                             span 세부 정보
 
-        hr
-        div.userCert 
-            each cert in user.certifications 
-                +cert(cert)
-            else 
-                span 등록한 인증서가 없습니다. 
+
+
 
 
 

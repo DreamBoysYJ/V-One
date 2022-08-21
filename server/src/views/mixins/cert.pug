@@ -1,13 +1,15 @@
 mixin cert(cert)
 
     table 
-        colgroup(span="4", class="columns")
+        colgroup(span="5", class="columns")
         tr 
             th 
-                a(href=`${cert._id}`) #{cert.title}
-            th #{cert.createdAt}
+            th 2024-08-16
+            th #{cert.owner}
             th #{cert.title}
-            th #{cert.title}
+            th 한국 표준 협회
+            td 
+                span 세부 정보
 
 
     

@@ -12,7 +12,7 @@ import FabricCAServices from "fabric-ca-client";
 // load the network configuration
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ccpPath = path.resolve(__dirname, "../../ccp", "connection-org3.json");
+const ccpPath = path.resolve(__dirname, "../../ccp", "connection-org1.json");
 const ccp = JSON.parse(fs.readFileSync(ccpPath, "utf8"));
 
 export const getJoin = (req,res) => {
@@ -26,7 +26,7 @@ export const postJoin = async (req, res) => {
 
     try {
         // Create a new CA client for interacting with the CA.
-        const caURL = ccp.certificateAuthorities["ca.org3.example.com"].url;
+        const caURL = ccp.certificateAuthorities["ca.org1.example.com"].url;
         const ca = new FabricCAServices(caURL);
 
         // Create a new file system based wallet for managing identities.
@@ -46,7 +46,7 @@ export const postJoin = async (req, res) => {
         }
 
         // Check to see if we've already enrolled the admin user.
-        const adminIdentity = await wallet.get("org3admin");
+        const adminIdentity = await wallet.get("org1admin");
         if (!adminIdentity) {
             console.log(
                 'An identity for the admin user "org3admin" does not exist in the wallet'
@@ -63,14 +63,14 @@ export const postJoin = async (req, res) => {
         const provider = wallet
             .getProviderRegistry()
             .getProvider(adminIdentity.type);
-        const adminUser = await provider.getUserContext(adminIdentity, "org3admin");
+        const adminUser = await provider.getUserContext(adminIdentity, "org1admin");
 
         console.log(`adminUser : ${adminUser}`);
 
         // Register the user, enroll the user, and import the new identity into the wallet.
         const secret = await ca.register(
             {
-                affiliation: "org3.department1",
+                affiliation: "org1.department1",
                 enrollmentID: id,
                 role: "client",
             },
@@ -88,7 +88,7 @@ export const postJoin = async (req, res) => {
                 certificate: enrollment.certificate,
                 privateKey: enrollment.key.toBytes(),
             },
-            mspId: "Org3MSP",
+            mspId: "Org1MSP",
             type: "X.509",
         };
         await wallet.put(id, x509Identity);

@@ -1,0 +1,40 @@
+extends base
+
+block content
+    if errorMessage 
+        span=errorMessage
+    div.querySearchContainer
+        div.searchBar
+            form(method="post") 
+                input.searchBar(type="text", name="certHash",placeholder="  인증서 이미지 해시로 검색...")
+                input.submitBtn(type="submit")
+            span
+                i.fas.fa-search
+
+        div.resultBar
+            
+            table 
+                thead 
+                    tr 
+                        th 선택
+                        th 만료일
+                        th 소유주 아이디
+                        th 발급 증명서
+                        th 발급 기관
+                        th 기타
+
+                if complete
+                    tbody 
+                        tr 
+                            td 
+                            td 2024-08-31
+                            td youngju307
+                            td 졸업증명서
+                            td 아주대학교
+                             
+                            td
+                                span 세부 정보
+
+
+
+        

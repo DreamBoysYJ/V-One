@@ -9,13 +9,13 @@ import FabricCAServices from "fabric-ca-client";
 // load the network configuration
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const ccpPath = path.resolve(__dirname, "ccp", "connection-org3.json");
+const ccpPath = path.resolve(__dirname, "ccp", "connection-org1.json");
 const ccp = JSON.parse(fs.readFileSync(ccpPath, "utf8"));
 
 async function main () {
     try {   
         // Create a new CA client for interacting with the CA.
-        const caURL = ccp.certificateAuthorities["ca.org3.example.com"].url;
+        const caURL = ccp.certificateAuthorities["ca.org1.example.com"].url;
         const ca = new FabricCAServices(caURL);
     
         // Create a new file system based wallet for managing identities.
@@ -25,7 +25,7 @@ async function main () {
     
 
         // Check to see if we've already enrolled the admin user.
-        const identity = await wallet.get("org3admin");
+        const identity = await wallet.get("org1admin");
         if (identity) {
             console.log(
                 'An identity for the admin user "org3admin" already exists in the wallet'
@@ -43,17 +43,17 @@ async function main () {
                 certificate: enrollment.certificate,
                 privateKey: enrollment.key.toBytes(),
             },
-            mspId: "Org3MSP",
+            mspId: "Org1MSP",
             type: "X.509",
         };
-        await wallet.put("org3admin", x509Identity);
+        await wallet.put("org1admin", x509Identity);
         console.log(
-            'Successfully enrolled admin user "org3admin" and imported it into the wallet'
+            'Successfully enrolled admin user "org1admin" and imported it into the wallet'
         );
 
 
     }catch (error) {
-        console.error(`Failed to enroll admin user "org3admin": ${error}`);
+        console.error(`Failed to enroll admin user "org1admin": ${error}`);
         process.exit(1);
     }
 

@@ -7,14 +7,14 @@ header
         ul
             if loggedIn 
                 li 
-                    a(href=`/users/${loggedInUser._id}/query`) #{loggedInUser.name}
+                    a.userProfile(href=`/users/${loggedInUser._id}/query`) #{loggedInUser.name}
                 li 
                     a(href=`/users/${loggedInUser._id}/query`) 내 지갑
                 li 
-                    a(href=`/users/${loggedInUser._id}/invoke`) 증명서 추가하기
+                    a(href=`/users/${loggedInUser._id}/invoke`) 증명서 등록
 
                 li 
-                    a(href="/join") 커리어 로드맵
+                    a(href=`/users/${loggedInUser._id}/querySearch`) 증명서 조회
                 li 
                     a(href="/join") 입사지원
                 li 
